@@ -1,0 +1,1022 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"SaveUpdateResFood": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"food_itemname": {
+						"type": "string"
+					},
+					"food_price": {
+						"type": "string"
+					},
+					"food_type": {
+						"type": "string"
+					},
+					"food_size": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"food_itemname",
+					"food_price",
+					"food_type",
+					"food_size",
+					"createdAt",
+					"updatedAt"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SaveReqFood": {
+				"properties": {
+					"food_itemname": {
+						"type": "string"
+					},
+					"food_price": {
+						"type": "string"
+					},
+					"food_type": {
+						"type": "string"
+					},
+					"food_size": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"food_itemname",
+					"food_price",
+					"food_type",
+					"food_size"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetFood": {
+				"properties": {
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateReqFood": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"food_itemname": {
+						"type": "string"
+					},
+					"food_price": {
+						"type": "string"
+					},
+					"food_type": {
+						"type": "string"
+					},
+					"food_size": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"food_itemname",
+					"food_price",
+					"food_type",
+					"food_size"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"deleteFood": {
+				"properties": {
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SaveUpdateResOrder": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					},
+					"Customer_name": {
+						"type": "string"
+					},
+					"Table_no": {
+						"type": "string"
+					},
+					"Waiter": {
+						"additionalProperties": false,
+						"type": "object"
+					},
+					"Food": {
+						"anyOf": [
+							{
+								"type": "string"
+							},
+							{}
+						]
+					},
+					"Order_status": {
+						"type": "number",
+						"format": "double"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id",
+					"Customer_name",
+					"Table_no",
+					"Waiter",
+					"Food",
+					"Order_status",
+					"createdAt",
+					"updatedAt"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SaveReqOrder": {
+				"properties": {
+					"Customer_name": {
+						"type": "string"
+					},
+					"Table_no": {
+						"type": "string"
+					},
+					"Food": {
+						"items": {
+							"additionalProperties": false,
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"Customer_name",
+					"Table_no",
+					"Food"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"GetOrder": {
+				"properties": {
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateReqOrder": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"SaveReqWaiter": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					},
+					"isAdmin": {
+						"type": "boolean"
+					},
+					"isWaiter": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"name",
+					"email",
+					"password",
+					"isAdmin",
+					"isWaiter"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"getReqAuth": {
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"email",
+					"password"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"UpdateReqOrderQueue": {
+				"properties": {
+					"_id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"_id"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {
+			"api_key": {
+				"type": "http",
+				"name": "Authorization",
+				"in": "header",
+				"scheme": "Bearer"
+			}
+		}
+	},
+	"info": {
+		"title": "webapi",
+		"version": "1.0.0",
+		"license": {
+			"name": "ISC"
+		},
+		"contact": {}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/product/savefooditem": {
+			"post": {
+				"operationId": "Saveadmin",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SaveUpdateResFood"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Food"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SaveReqFood"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/product/getfooditem": {
+			"post": {
+				"operationId": "Getadmin",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SaveUpdateResFood"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Food"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/GetFood"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/product/updatefooditem": {
+			"put": {
+				"operationId": "UpdateAdmin",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SaveUpdateResFood"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Food"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateReqFood"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/product/deletefooditem": {
+			"delete": {
+				"operationId": "Deletadmin",
+				"responses": {
+					"200": {
+						"description": "Product deleted",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Food"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/deleteFood"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/product/getfoodmenu": {
+			"post": {
+				"operationId": "GetadminList",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/SaveUpdateResFood"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Food"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/order/saveorder": {
+			"post": {
+				"operationId": "Saveorder",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SaveUpdateResOrder"
+								}
+							}
+						}
+					}
+				},
+				"summary": "To save order you must login first.",
+				"tags": [
+					"order"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SaveReqOrder"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/order/getorder": {
+			"post": {
+				"operationId": "Getorder",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SaveUpdateResOrder"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"order"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/GetOrder"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/order/updateorder": {
+			"put": {
+				"operationId": "UpdateAdmin",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SaveUpdateResOrder"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"order"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateReqOrder"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/order/deleteorder": {
+			"delete": {
+				"operationId": "DeleteOrder",
+				"responses": {
+					"200": {
+						"description": "Product deleted",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"order"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"properties": {
+									"id": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"id"
+								],
+								"type": "object"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/order/getorderlist": {
+			"post": {
+				"operationId": "GetOrderlist",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/SaveUpdateResOrder"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"order"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/user/savewaiter": {
+			"post": {
+				"operationId": "Savewaiter",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SaveReqWaiter"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/SaveReqWaiter"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/user/getbill": {
+			"post": {
+				"operationId": "Getorder",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"user"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/GetOrder"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/auth/getauth": {
+			"post": {
+				"operationId": "Getauthuser",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/getReqAuth"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"auth"
+				],
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"properties": {
+									"password": {
+										"type": "string"
+									},
+									"email": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"password",
+									"email"
+								],
+								"type": "object"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/queue/getiteminqueue": {
+			"post": {
+				"operationId": "Getorder",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/SaveUpdateResOrder"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Queue"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/queue/updateorder": {
+			"put": {
+				"operationId": "UpdateAdmin",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SaveUpdateResOrder"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Queue"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateReqOrderQueue"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/queue/orderserved": {
+			"put": {
+				"operationId": "UpdateAdminserved",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/SaveUpdateResOrder"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Queue"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateReqOrderQueue"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/queue/deleteorder": {
+			"delete": {
+				"operationId": "DeleteOrder",
+				"responses": {
+					"200": {
+						"description": "Product deleted",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Queue"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"properties": {
+									"id": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"id"
+								],
+								"type": "object"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/queue/pendingorders": {
+			"post": {
+				"operationId": "GetOrderlistp",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/SaveUpdateResOrder"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Queue"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/queue/waitingorders": {
+			"post": {
+				"operationId": "GetOrderlistw",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/SaveUpdateResOrder"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Queue"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/queue/readyorders": {
+			"post": {
+				"operationId": "GetOrderlistr",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/SaveUpdateResOrder"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Queue"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/queue/servedorders": {
+			"post": {
+				"operationId": "GetOrderlists",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/SaveUpdateResOrder"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Queue"
+				],
+				"security": [
+					{
+						"api_key": []
+					}
+				],
+				"parameters": []
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}
