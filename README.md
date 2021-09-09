@@ -1,1 +1,1 @@
-# Order-Management-System
+Just paste your mongo connection string in index.js in line 26
